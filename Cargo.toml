@@ -1,0 +1,25 @@
+[package]
+name = "sqlx-actix-web-actor-clash"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix = "0.13.0"
+actix-web = "4.1"
+anyhow = "1.0.62"
+sqlx = { version = "0.6.1", features = [
+  "runtime-actix-rustls",
+  "macros",
+  "postgres",
+  "migrate",
+  "offline",
+] }
+thiserror = "1.0.32"
+tokio = { version = "1.20.1", features = [
+  "macros",
+  "rt",
+  "rt-multi-thread",
+  "tracing",
+] }
